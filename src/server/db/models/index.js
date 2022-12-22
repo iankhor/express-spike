@@ -22,7 +22,6 @@ const Community = sequelize.define('Community', {
 
 const Transaction = sequelize.define('Transaction', {
   amount: DataTypes.NUMBER,
-  communityId: DataTypes.UUID
 });
 
 Transaction.belongsTo(Community)

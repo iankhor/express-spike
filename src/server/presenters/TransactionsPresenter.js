@@ -1,9 +1,9 @@
-export default class FooBarPresenter {
+export default class TransactionPresenter {
     constructor(tx) {
         this.tx = tx
     }
 
-    async transactions() {
+    transactions() {
         return this.tx.map(t => this.#formatTransactions(t))
     }
 
