@@ -2,6 +2,7 @@
 
 See various implementations for inspiration
   - `services/`
+  - `controllers/`
   - `presenters/`
   - `test/factories`
   - `src/server/app.integration.test.js`
@@ -9,6 +10,8 @@ See various implementations for inspiration
 ### Instructions
 
 1. run `yarn install`
+2. run `npx sequalize db:migrate`
+3. run `npx sequalize db:seed:all`
 2. to start app, run `yarn start:dev`
 3. go to `localhost:3000`
 4. observe amount in returned payload changing
