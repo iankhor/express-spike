@@ -8,7 +8,7 @@ export default class TransactionsService {
     showMeTheMoney() {
         db.Transaction.update(
             { amount: this.amount },
-            { where: { id: [this.uuid] } }
+            { where: { id: [this.uuid] } },
         )
     }
 }
