@@ -7,7 +7,7 @@ app.use(json())
 app.use('/', router)
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
+const server = app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
 
 export default app
+export { server }
