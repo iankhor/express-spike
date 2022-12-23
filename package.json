@@ -1,6 +1,8 @@
 {
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist  --copy-files",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:seed:all": "npx sequelize db:seed:all",
     "start": "node src/server/app.js",
     "start:dev": "nodemon --exec babel-node src/server/app.js",
     "test": "yarn jest --coverage"
