@@ -1,6 +1,4 @@
-import express from 'express'
 import request from 'supertest'
-import router from './routes'
 import db from './db/models'
 import { cleanDB } from '../test/helpers'
 import TransactionFactory from '../test/factories/transactions'

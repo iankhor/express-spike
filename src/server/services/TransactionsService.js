@@ -5,7 +5,7 @@ export default class TransactionsService {
         this.uuid = uuid
         this.amount = amount
     }
-    showMeTheMoney() {
+    async showMeTheMoney() {
         db.Transaction.update(
             { amount: this.amount * 2 },
             { where: { id: [this.uuid] } },

@@ -1,8 +1,7 @@
 import db from '../../../src/server/db/models'
-import { v4 as uuidv4 } from 'uuid';
 
 
-export default async function TransactionFactory(overrides = {}) {
+export default async function TransactionFactory() {
     const community = await db.Community.create({
         firstName: 'Snoop',
         lastName: 'Dog',
@@ -15,6 +14,6 @@ export default async function TransactionFactory(overrides = {}) {
     return db.Transaction.create({
         amount: 1000,
         CommunityId: community.id,
-        Community: community
+        Community: community,
     }, { logging: false })
 }
