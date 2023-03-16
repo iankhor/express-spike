@@ -1,15 +1,19 @@
 {
+  "type": "module",
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist  --copy-files",
     "db:migrate": "npx sequelize db:migrate",
     "db:seed:all": "npx sequelize db:seed:all",
     "start": "node src/server/app.js",
     "start:dev": "nodemon --exec babel-node src/server/app.js",
+    "start:ping": "node src/ping.js",
     "test": "yarn jest --coverage"
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["./src/**"],
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/server/db/config/*",
       "<rootDir>/src/server/db/migration/*",
@@ -31,7 +35,9 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
+    "axios": "^1.3.4",
     "express": "^4.18.2",
+    "jsondiffpatch": "^0.4.1",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.20",
     "rimraf": "^3.0.2",
